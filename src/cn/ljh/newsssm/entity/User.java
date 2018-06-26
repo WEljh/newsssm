@@ -1,0 +1,72 @@
+package cn.ljh.newsssm.entity;
+
+
+
+public class User{
+
+	// Fields
+
+	private String uid;
+	private String xm;
+	private String pwd;
+	private String bj;
+	private String role;
+
+	// Constructors
+
+	/** default constructor */
+	public User() {
+	}
+
+	/** full constructor */
+	public User(String uid, String xm, String pwd, String bj, String role) {
+		this.uid = uid;
+		this.xm = xm;
+		this.pwd = pwd;
+		this.bj = bj;
+		this.role = role;
+	}
+
+	// Property accessors
+
+	public String getUid() {
+		return this.uid;
+	}
+
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
+
+	public String getXm() {
+		return this.xm;
+	}
+
+	public void setXm(String xm) {
+		this.xm = xm;
+	}
+
+	public String getPwd() {
+		return this.pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public String getBj() {
+		return this.bj;
+	}
+
+	public void setBj(String bj) {
+		this.bj = bj;
+	}
+
+	public String getRole() {
+		return this.role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ljh.newsssm.dao.CommentMapper">
+	<select id="getAll" parameterType="int" resultType="cn.ljh.newsssm.entity.Comment">
+		select * from comment
+		<where>nid=#{id1}</where>
+		limit ${page},${rows}
+	</select>
+	<insert id="addComment" parameterType="cn.ljh.newsssm.entity.Comment">
+		insert into comment(nid,comment,time,cname) values(#{nid},#{comment},#{time},#{cname})
+	</insert>
+		<select id="countofComment" parameterType="int" resultType="Long"> 
+		select count(*) from comment where nid=#{nid}
+	</select>
+</mapper>
